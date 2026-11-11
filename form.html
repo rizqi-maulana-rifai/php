@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <!-- <label for="username">username</label>
+        <input type="text" id="username">
+        <br>
+        <label  for="angka">angka</label>
+        <br>
+        <input type="number" id="angka">
+        <br> -->
+        <!-- <input type="radio" name="" id=""> --> 
+
+        <label for="nama">nama lengkap</label>
+        <br>
+        <input type="text" name="nama" id="nama" placeholder="contoh : rifai">
+        <br>
+        <label for="password">password</label>
+        <br>
+        <input type="password" name="password" id="password">
+        <br>
+        <label for="email">email</label>
+        <br>
+        <input type="email" name="email" id="email">
+        <br>
+        <label for="date">tanggal</label>
+        <br>
+        <input type="date" name="tanggal" id="date">
+        <br>
+        <label for="kelamin">kelamin</label>
+        <br>
+        <input type="radio" name="kelamin" id="laki ">
+        <label for="laki">laki laki</label>
+        <input type="radio" name="kelamin" id="perempuan ">
+        <label for="perempuan">perempuan</label>
+        <br> 
+        <label for="jurusan">jurusan</label>
+        <br>
+        <select name="jurusan" id="jurusan">
+            <option value="RPL">Rekayasa Perangkat Lunak</option>
+            <option value="TPM">Teknik Permesinan</option>
+            <option value="TITL">Teknik instalasi Tenaga Listrik</option>
+        </select>
+        <br>
+        <label for="alamat">alamat</label>
+        <br>
+        <textarea name="alamat" id="alamat" rows="10" cols="30"></textarea>
+        <br>
+        <fieldset>
+            <legend>data kelas</legend>
+            <label for="nama_kelas">nama kelas</label>
+            <br>
+            <input type="text" name="nama_kelas" id="nama_kelas"">
+            <br>
+            <label for="nama_jurusan">nama jurusan</label>  
+            <br>
+            <input type="text" name="nama_jurusan" id="nama_jurusan">
+        </fieldset>
+        <br>
+        <input type="submit" value="submit">
+        <button type="reset">reset</button>
+
+
+    </form>
+    <div id="hasil"></div>
+    <script>
+        const from = document.getElementById('form');
+        const hasil = document.getElementById('hasil');
+
+        from.addEventListener('submit', function(e){
+            e.preventDefault();
+
+            let nama = document.getElementById('nama').value;
+            let email = document.getElementById('email').value;
+            let jurusan = document.getElementById('jurusan').value;
+
+            hasil.innerHTML = 'nama : ' + nama ;
+            hasil.innerHTML += '<br> email : ' + email;
+            hasil.innerHTML += '<br> jurusan : ' + jurusan;
+            //kenapa pake + karena ditambahin aja nilainya
+        })
+
+    </script>
+</body>
+</html>
